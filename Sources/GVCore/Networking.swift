@@ -59,6 +59,11 @@ extension GVCore {
                 
             }
             
+            /// Calls to live internet to send data to specific location
+            /// - Parameters:
+            ///   - url: the location you wish to send data to
+            ///   - body: the object you wish to send over network
+            ///   - completionHandler: Returns a result object with status of the request
             public func sendData<I: Codable>(to url :URL, body: I, completionHandler: @escaping (NetworkResult<Data>) -> Void ){
                 var request = URLRequest(url: url)
                 do {
