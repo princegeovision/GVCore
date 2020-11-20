@@ -2,18 +2,13 @@ import XCTest
 @testable import GVCore
 
 final class GVCoreTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(GVCoreStruct().text, "Hello, World!")
-    }
-//    func testVersion(){
-//        XCTAssertEqual(GVCore.version, "0.1.0")
-//    }
 
+    func testColorRedEqual(){
+        let color = GVCore.colorFromHexString("FF0000")
+        XCTAssertEqual(color, .red)
+    }
     static var allTests = [
-        ("testExample", testExample),
-        //("testVersion", testVersion)
+        ("testColorRedEqual", testColorRedEqual),
+        
     ]
 }
