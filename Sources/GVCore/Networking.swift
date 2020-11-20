@@ -9,6 +9,7 @@ import Foundation
 
 protocol NetworkSession {
     func get(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void )
+    func post(with request: URLRequest, completionHandler: @escaping (Data?, Error?) -> Void )
 }
 //Extension URLSession to Network Session
 // for
@@ -16,14 +17,20 @@ protocol NetworkSession {
 // (2) DI Test with NetworkSessionMock it's possible.
 extension URLSession : NetworkSession {
     
+    func post(with request: URLRequest, completionHandler: @escaping (Data?, Error?) -> Void ) {
+        let task = dataTask(with: request) { data, _, error in
+            completionHandler(data, error)
+        }
+        task.resume()
+    }
+    
     func get(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
         let task = dataTask(with: url) { data, _, error in
             completionHandler(data, error)
         }
         task.resume()
     }
-    
-    
+
 }
 extension GVCore {
     public class Networking {
@@ -50,6 +57,21 @@ extension GVCore {
                     completionHandler(result)
                 }
                 
+            }
+            
+            public func sendData<I: Codable>(to url :URL, body: I, completionHandler: @escaping (NetworkResult<Data>) -> Void ){
+                var request = URLRequest(url: url)
+                do {
+                    let httpBody = try JSONEncoder().encode(body)
+                    request.httpBody = httpBody
+                    request.httpMethod = "POST"
+                    session.post(with: request) { (data, error) in
+                        let result = data.map(NetworkResult<Data>.success) ?? .failure(error)
+                        return completionHandler(result)
+                    }
+                } catch let error {
+                    return completionHandler(.failure(error))
+                }
             }
         }
         public enum NetworkResult<Value> {
