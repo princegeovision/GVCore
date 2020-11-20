@@ -28,16 +28,23 @@ public class GVCore {
     //MARK: public stuff
     /// defaultColor for App
     public static var defaultColor : UIColor {
-        return GVCore.colorFromHexString("006736")
+        return GVCore.colorFromHexString("005FFF")
     }
     
     public static var gveyeColor : UIColor {
-        return GVCore.colorFromHexString("0067FF")
+        //[UIColor colorWithRed:123.0/255.0 green:144.0/255.0 blue:170/255.0 alpha:1.0];
+        return GVCore.colorFromHexString("7B90AA")
     }
     
     public static var cloudColor : UIColor{
-        return GVCore.colorFromHexString("FF67FF")
+        //[UIColor colorWithRed:0.0/255.0 green:150.0/255.0 blue:206/255.0 alpha:1.0];
+        return GVCore.colorFromHexString("0096CE")
     }
+    public static var advanceColor : UIColor{
+        //[UIColor colorWithRed:0.0/255.0 green:130.0/255.0 blue:178.0/255.0 alpha:1.0];
+        return GVCore.colorFromHexString("0082B2")
+    }
+    
 }
 
 //struct GVCoreStruct {
