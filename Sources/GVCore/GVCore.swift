@@ -1,7 +1,7 @@
 import UIKit
 
 
-class GVCore {
+public class GVCore {
 
     
     /// Allow you to convert 6 gigit hexadecimal string into a UIColor instance
@@ -10,7 +10,7 @@ class GVCore {
     ///   - hexString: A 6-digital hexadecimal string. Use 6 digits rather then 8, and add the accompanying alpha value in the second parameter
     ///   - alpha: alpha value from 0.0~1.0
     /// - Returns: a UIColor define by input string
-    class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    internal class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         let r, g, b: CGFloat
         let offset = hexString.hasPrefix("#") ? 1 : 0
         let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -25,7 +25,11 @@ class GVCore {
         }
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
     }
-    
+    //MARK: public stuff
+    /// defaultColor for App
+    public static var defaultColor : UIColor {
+        return GVCore.colorFromHexString("006736")
+    }
 }
 
 //struct GVCoreStruct {
