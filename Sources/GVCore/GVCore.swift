@@ -26,25 +26,36 @@ public class GVCore {
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
     }
     //MARK: public stuff
-    /// defaultColor for App
+    /// Random chose color by Prince
     public static var defaultColor : UIColor {
         return GVCore.colorFromHexString("005FFF")
     }
-    
+    // Gv-Eye
     public static var gveyeColor : UIColor {
         //[UIColor colorWithRed:123.0/255.0 green:144.0/255.0 blue:170/255.0 alpha:1.0];
         return GVCore.colorFromHexString("7B90AA")
     }
-    
+    // Cloud App, CamApp, Cloud Center Client
     public static var cloudColor : UIColor{
         //[UIColor colorWithRed:0.0/255.0 green:150.0/255.0 blue:206/255.0 alpha:1.0];
         return GVCore.colorFromHexString("0096CE")
     }
+    // Advance Eye
     public static var advanceColor : UIColor{
         //[UIColor colorWithRed:0.0/255.0 green:130.0/255.0 blue:178.0/255.0 alpha:1.0];
         return GVCore.colorFromHexString("0082B2")
     }
-    
+    public static var bolderColor : UIColor{
+        //[UIColor colorWithRed:28/255.0 green:28/255.0 blue:27/255.0 alpha:1.0];
+        return GVCore.colorFromHexString("1C1C1B")
+    }
+    public static var fillColor : UIColor{
+        //[UIColor colorWithRed:28/255.0 green:28/255.0 blue:27/255.0 alpha:1.0];
+        return GVCore.colorFromHexString("4F4F4E")
+    }
+    public static var placeholderColor : UIColor{
+        return GVCore.colorFromHexString("0000FA", alpha: 0.22)
+    }
 }
 
 //struct GVCoreStruct {
