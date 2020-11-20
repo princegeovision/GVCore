@@ -52,6 +52,7 @@
 		EF4FA3CC256770E400F81719 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		EF4FA3CE256770FC00F81719 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		EF4FA3D02567733000F81719 /* GVCoreNetworingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GVCoreNetworingTests.swift; sourceTree = "<group>"; };
+		EF4FA3D22567B58C00F81719 /* GVCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GVCore.podspec; sourceTree = "<group>"; };
 		"GVCore::GVCore::Product" /* GVCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GVCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GVCore::GVCoreTests::Product" /* GVCoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GVCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* GVCoreColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GVCoreColorTests.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				EF4FA3D22567B58C00F81719 /* GVCore.podspec */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
