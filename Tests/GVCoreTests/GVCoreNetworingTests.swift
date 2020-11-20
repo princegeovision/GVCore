@@ -35,7 +35,7 @@ final class GVCoreNetworingTests: XCTestCase {
 
 
     func testVersionExample() {
-        XCTAssertEqual("0.2.2", GVCore.version)
+        XCTAssertEqual("0.3.0", GVCore.version)
     }
     func testFakeNetworkloadDataExample() {
 
