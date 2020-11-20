@@ -30,6 +30,14 @@ public class GVCore {
     public static var defaultColor : UIColor {
         return GVCore.colorFromHexString("006736")
     }
+    
+    public static var gveyeColor : UIColor {
+        return GVCore.colorFromHexString("0067FF")
+    }
+    
+    public static var cloudColor : UIColor{
+        return GVCore.colorFromHexString("FF67FF")
+    }
 }
 
 //struct GVCoreStruct {
