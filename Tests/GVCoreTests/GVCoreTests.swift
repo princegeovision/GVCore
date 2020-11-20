@@ -6,10 +6,14 @@ final class GVCoreTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(GVCore().text, "Hello, World!")
+        XCTAssertEqual(GVCoreStruct().text, "Hello, World!")
     }
+//    func testVersion(){
+//        XCTAssertEqual(GVCore.version, "0.1.0")
+//    }
 
     static var allTests = [
         ("testExample", testExample),
+        //("testVersion", testVersion)
     ]
 }
